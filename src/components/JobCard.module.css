@@ -1,0 +1,118 @@
+.jobCard {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin-bottom: 16px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.jobCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.titleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  margin: 0;
+  flex: 1;
+  padding-right: 12px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.fullTime {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.partTime {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.infoRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.infoItem {
+  flex: 1;
+  min-width: 150px;
+}
+
+.label {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 0 0 4px 0;
+}
+
+.value {
+  font-size: 1rem;
+  color: #334155;
+  margin: 0;
+}
+
+.description {
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+
+.description .value {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 8px;
+}
+
+.button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #1e3a8a;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background-color: #1e40af;
+}
+
+@media (max-width: 640px) {
+  .infoRow {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .infoItem {
+    min-width: 100%;
+  }
+}

@@ -1,0 +1,272 @@
+.filterBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.searchFilter {
+  flex: 1;
+  min-width: 200px;
+  max-width: 400px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 8px 12px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  color: #334155;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+
+.searchInput::placeholder {
+  color: #94a3b8;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+  background-color: white;
+}
+
+.filterGroup {
+  position: relative;
+}
+
+.dropdown {
+  position: relative;
+  min-width: 160px;
+}
+
+.dropdownToggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  color: #334155;
+  font-size: 0.875rem;
+  cursor: pointer;
+  min-width: 160px;
+  transition: all 0.2s ease;
+}
+
+.dropdownToggle:hover {
+  background-color: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.arrow {
+  margin-left: 8px;
+  font-size: 0.75rem;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  margin-top: 4px;
+  width: 240px;
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.searchWrapper {
+  padding: 8px;
+}
+
+.checkboxItem {
+  display: flex;
+  align-items: center;
+  padding: 6px 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border-radius: 4px;
+}
+
+.checkboxItem:hover {
+  background-color: #f1f5f9;
+}
+
+.checkboxItem input {
+  margin-right: 8px;
+}
+
+.checkboxLabel {
+  font-size: 0.875rem;
+  line-height: 1.25;
+  color: rgb(63, 63, 63);
+}
+
+.resetButton {
+  padding: 8px 12px;
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.resetButton:hover {
+  background-color: #dc2626;
+}
+
+.sliderContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 220px;
+}
+
+.sliderLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #334155;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.salaryValue {
+  font-weight: normal;
+  color: #64748b;
+}
+
+.sliderWrapper {
+  position: relative;
+  height: 6px;
+  width: 100%;
+}
+
+.sliderProgress {
+  position: absolute;
+  height: 6px;
+  background-color: #ff0000; /* Bright red for high contrast */
+  border-radius: 3px 0 0 3px;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.slider {
+  width: 100%;
+  height: 6px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #cbd5e1;
+  border-radius: 3px;
+  outline: none;
+  position: absolute;
+  margin: 0;
+  top: 0;
+  left: 0;
+  background-size: 100% 100%;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #e11d48; /* Matching red for the thumb */
+  cursor: pointer;
+  transition: background 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 2;
+}
+
+.slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #e11d48; /* Matching red for the thumb */
+  cursor: pointer;
+  transition: background 0.2s ease;
+  border: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  background: #be123c;
+}
+
+.slider::-moz-range-thumb:hover {
+  background: #be123c;
+}
+
+/* Make the slider track transparent */
+.slider::-webkit-slider-runnable-track {
+  background: transparent;
+  border-radius: 3px;
+  height: 6px;
+}
+
+.slider::-moz-range-track {
+  background: transparent;
+  border-radius: 3px;
+  height: 6px;
+}
+
+.noOptions {
+  padding: 8px;
+  color: #64748b;
+  font-size: 0.875rem;
+  text-align: center;
+  font-style: italic;
+}
+
+@media (max-width: 640px) {
+  .filterBar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .dropdown, .dropdownToggle, .sliderContainer {
+    width: 100%;
+  }
+
+  .dropdownMenu {
+    width: 100%;
+  }
+}
+
+.sortCheckbox {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  color: #334155;
+  cursor: pointer;
+  white-space: nowrap;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  padding: 8px 12px;
+  transition: all 0.2s ease;
+}
+
+.sortCheckbox:hover {
+  background-color: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.sortCheckbox input {
+  margin-right: 8px;
+}
